@@ -4,7 +4,7 @@ This project implements a system for managing a satellite communication network 
 
 The satellite network is constructed based on the frequency of satellite transmissions, with lower-frequency nodes placed deeper in the tree. Several operations such as encoding/decoding messages, finding common ancestors, and structured tree output are implemented.
 
-📁 **All logic and functionality are implemented in `main.c`.**
+📁 **All logic and functionality are implemented in `main.c` and `structures.h`.**
 
 ## ✅ Features
 
@@ -42,9 +42,11 @@ Builds a binary tree representing the satellite network using Min-Heap logic:
 
 ## 📁 Project Structure
 
-- `main.c`: Entire solution implemented here (structures, logic, parsing, traversal)
+- `main.c`: Solution implementation
+- `structures.h`: Data structures and their corresponding basic functions
 - `Makefile`: Contains `build` and `clean` rules
 - `README.md`: This file
+- `README`: Original README file used for the assignment
 
 ## ⚙️ Build & Run
 

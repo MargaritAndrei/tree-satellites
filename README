@@ -1,0 +1,49 @@
+MARGARIT ANDREI - 315CD - Descriere pentru rezolvare Tema2 SDA: 
+Pe checkerul local am obtinut 95 (din 115) de puncte pentru teste,
+acestea trecand si testul de memorie cu valgrind.
+
+Pentru implementarea structurilor de date am folosit:
+
+-HEAP, cu functiile aferente lucrate la laborator,
+ce are la baza elemente de tip arbore binar, pentru a putea
+realiza algoritmul in felul in care a fost precizat in enuntul temei;
+
+-ARBORE BINAR, cu functiile aferente implementate la laborator,
+ca element al vectorului heap-ului, pentru a putea
+insera sateliti noi si a-i adauga corespunzator;
+
+-COADA, cu functiile aferente implementate la laborator,
+pentru a putea face bfs pentru afisarea arborelui specifica
+primei cerinte;
+
+Pentru rezolvarea cerintelor, 1-4, fara bonus, am procedat astfel:
+
+-valabil pentru toate cerintele: functia make_tree construieste arborele
+care urmeaza instructiunile din enunt: insereaza in heap fiecare nod
+dat initial, iar apoi concateneaza primele 2 nod-uri ordonate conform
+prioritatii respectiv sirului de caractere, creeaza mini-arborele nou
+iar acesta este inserat in heap;
+
+-cerinta 1: functia bfs parcurge arborele folosind o coada si afiseaza
+pe nivele arborele rezultat dupa rularea functiei make_tree;
+
+-cerinta 2: functia second_task ia fiecare sir de coduri, cand se ajunge
+la o frunza ne intoarcem la nodul radacina si afisam frunza respectiva
+pana cand terminam codul de parcurs;
+
+-cerinta 3: functia third_task face o parcurgere recursiva dfs a
+arborelui, adaptata pentru a crea codurile binare corespunzatoare
+fiecarui element din arbore si afisam codul cand am ajuns la frunza
+cautata;
+
+-cerinta 4: functia fourth_task aplica algoritmul LCA pentru a
+gasi cel mai apropiat stramos comun al celor n noduri date:
+functia find cauta sa vada daca target se regaseste printre
+fiii unui nod, functia count_matches numara cate dintre nodurile
+date sunt fiii nodului curent, iar functia find_lca aplica algoritmul
+LCA;
+
+Pentru valgrind am implementat functiile clasice de eliberare
+a memoriei freeTree, freeHeap, freeQueue. Pentru a implementa
+structurile de date si functiile generice ale acestora am creat un
+fisier header structures.h;
